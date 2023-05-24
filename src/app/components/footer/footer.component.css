@@ -1,0 +1,19 @@
+.close-cookie {
+    float: right;
+    padding: 0px;
+    margin: auto 0px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+.wrapper {
+    margin-top: 10px;
+    padding: 10px 0px;
+}
+
+.fade-out {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 0.75s, opacity 0.75s linear;
+}

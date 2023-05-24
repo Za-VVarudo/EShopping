@@ -1,0 +1,21 @@
+<div class="header">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" *ngFor="let url of sliderImgUrls; index as i">
+            <div [ngClass]="{
+                'carousel-item': true,
+                'active': i == activeIndex}">
+              <img class="d-block w-100 " [src]="url" >
+            </div>
+        </div>
+    
+        <button class="carousel-control-prev" role="button" data-slide="prev" (click)="onSliderPrevClick()">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only"></span>
+        </button>
+        <button class="carousel-control-next" role="button" data-slide="next" (click)="onSliderNextClick()">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only"></span>
+        </button>
+      </div>
+</div>
+

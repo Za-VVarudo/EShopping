@@ -1,0 +1,25 @@
+<div class="wrapper">
+    <div class="form-control search-div">
+        <div>
+            <label for="searchInput" class="search-label">Search:</label>
+            <!--<input id="searchInput" class="search-input" (input)="onSearchValueChange($event)" [value]="searchValue"/>-->
+            <input id="searchInput" class="search-input" [(ngModel)]="searchValue" type="text" (input)="onSearchValueChange()"/>
+
+            <button type="button" class="btn btn-primary search-button" (click)="onSearchButtonClicked()">
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
+
+        <div class="filter-status">
+            <b>Tình trạng: </b>
+            <select aria-label="label for the select" [(ngModel)]="selectedStatus" (change)="onFilterValueChange()">
+                <option [value]="undefined">Tất cả</option>
+                <option *ngFor="let status of filterStatuses" [value]="status.id"> {{status.name}}</option>
+            </select>
+        </div>
+
+        <div class="search-text">
+            <span *ngIf="searchValue.length > 0">You searched for "{{searchValue}}"</span>
+        </div>
+    </div>
+</div>
